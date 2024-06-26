@@ -5,28 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cdf3dd4c-460e-448f-8a09-c1dbd25a9a45" name="变更" comment="">
-      <change afterPath="$PROJECT_DIR$/app/models/user.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/devise/confirmations/new.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/devise/mailer/confirmation_instructions.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/devise/mailer/email_changed.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/devise/mailer/password_change.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/devise/mailer/reset_password_instructions.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/devise/mailer/unlock_instructions.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/devise/passwords/edit.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/devise/passwords/new.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/devise/registrations/edit.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/devise/registrations/new.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/devise/sessions/new.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/devise/shared/_error_messages.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/devise/shared/_links.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/devise/unlocks/new.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/db/migrate/20240626133325_devise_create_users.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/db/seeds/development.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/db/seeds/test.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/controllers/venues_controller.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/helpers/venues_helper.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/models/venue.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/venues/_form.html.erb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/venues/_venue.html.erb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/venues/_venue.json.jbuilder" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/venues/edit.html.erb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/venues/index.html.erb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/venues/index.json.jbuilder" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/venues/new.html.erb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/venues/show.html.erb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/venues/show.json.jbuilder" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/migrate/20240626145115_create_venues.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db/schema.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/schema.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/seeds.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/seeds.rb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -155,7 +149,7 @@
       <option name="presentableId" value="Default" />
       <updated>1719324065903</updated>
       <workItem from="1719324067357" duration="5478000" />
-      <workItem from="1719353411384" duration="8033000" />
+      <workItem from="1719353411384" duration="9276000" />
     </task>
     <servers />
   </component>

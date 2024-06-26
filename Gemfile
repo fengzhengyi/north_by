@@ -72,10 +72,7 @@ group :development do
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"
 
-  # rails annotate 为项目中的类文件添加注释：
-  # rails annotate --model app/models：只注释模型文件。
-  # rails annotate --controller app/controllers：只注释控制器文件。
-  # rails annotate --routes：只注释路由文件。
+  # 为项目中的类文件添加注释： bundle exec annotate --models/--routes
   gem "annotate"
   gem "erb_lint", require: false
   gem "htmlbeautifier"
