@@ -46,10 +46,20 @@ gem "bootsnap", require: false
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
+#
+# 它提供了一个用于打印和检查Ruby对象的美观格式的方法，使用方法是：ap object
+gem "awesome_print"
+# 它提供了一个用于以表格格式打印数组和哈希表等集合的简单方法，使用方法：TablePrint.print array/hash
+gem "table_print"
+gem "date_by_example"
+gem "devise"
+gem "simple_form"
+gem "simple_form-tailwind"
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri windows ]
+  gem "faker"
 end
 
 group :development do
@@ -57,9 +67,18 @@ group :development do
   gem "web-console"
 
   # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
-  # gem "rack-mini-profiler"
+  gem "rack-mini-profiler"
 
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"
+
+  # rails annotate 为项目中的类文件添加注释：
+  # rails annotate --model app/models：只注释模型文件。
+  # rails annotate --controller app/controllers：只注释控制器文件。
+  # rails annotate --routes：只注释路由文件。
+  gem "annotate"
+  gem "erb_lint", require: false
+  gem "htmlbeautifier"
+  gem "listen"
 end
 
