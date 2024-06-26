@@ -5,21 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cdf3dd4c-460e-448f-8a09-c1dbd25a9a45" name="变更" comment="">
-      <change afterPath="$PROJECT_DIR$/app/controllers/venues_controller.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/helpers/venues_helper.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/models/venue.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/venues/_form.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/venues/_venue.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/venues/_venue.json.jbuilder" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/venues/edit.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/venues/index.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/venues/index.json.jbuilder" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/venues/new.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/venues/show.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/venues/show.json.jbuilder" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/db/migrate/20240626145115_create_venues.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20240626145115_create_venues.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20240626145115_create_venues.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db/schema.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/schema.rb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -149,7 +137,7 @@
       <option name="presentableId" value="Default" />
       <updated>1719324065903</updated>
       <workItem from="1719324067357" duration="5478000" />
-      <workItem from="1719353411384" duration="9276000" />
+      <workItem from="1719353411384" duration="10264000" />
     </task>
     <servers />
   </component>
