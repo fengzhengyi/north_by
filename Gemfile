@@ -46,7 +46,8 @@ gem "bootsnap", require: false
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
-#
+
+gem "activerecord-postgres_enum"
 # 它提供了一个用于打印和检查Ruby对象的美观格式的方法，使用方法是：ap object
 gem "awesome_print"
 # 它提供了一个用于以表格格式打印数组和哈希表等集合的简单方法，使用方法：TablePrint.print array/hash

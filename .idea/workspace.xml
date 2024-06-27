@@ -5,9 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cdf3dd4c-460e-448f-8a09-c1dbd25a9a45" name="变更" comment="">
+      <change afterPath="$PROJECT_DIR$/app/controllers/concerts_controller.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/helpers/concerts_helper.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/models/concert.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/concerts/_concert.html.erb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/concerts/_concert.json.jbuilder" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/concerts/_form.html.erb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/concerts/edit.html.erb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/concerts/index.html.erb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/concerts/index.json.jbuilder" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/concerts/new.html.erb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/concerts/show.html.erb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/concerts/show.json.jbuilder" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/migrate/20240626153053_create_concerts.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gemfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/band.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/band.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/venue.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/venue.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/migrate/20240626145115_create_venues.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20240626145115_create_venues.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db/schema.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/schema.rb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -137,7 +153,7 @@
       <option name="presentableId" value="Default" />
       <updated>1719324065903</updated>
       <workItem from="1719324067357" duration="5478000" />
-      <workItem from="1719353411384" duration="10264000" />
+      <workItem from="1719353411384" duration="16341000" />
     </task>
     <servers />
   </component>

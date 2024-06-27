@@ -4,7 +4,7 @@
 #
 #  id            :bigint           not null, primary key
 #  name          :string
-#  description   :string
+#  description   :text
 #  rows          :integer
 #  seats_per_row :integer
 #  created_at    :datetime         not null

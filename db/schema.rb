@@ -10,9 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_06_26_150704) do
+ActiveRecord::Schema[7.1].define(version: 2024_06_26_153053) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_enum :enum_access, [
+    "general",
+    "members",
+    "vips",
+  ], force: :cascade
+
+  create_enum :enum_ilk, [
+    "concert",
+    "meet_n_greet",
+    "battle",
+  ], force: :cascade
 
   create_table "bands", force: :cascade do |t|
     t.string "name"
@@ -20,6 +32,19 @@ ActiveRecord::Schema[7.1].define(version: 2024_06_26_150704) do
     t.text "genre_tags"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "concerts", force: :cascade do |t|
+    t.string "name"
+    t.text "description"
+    t.text "genre_tags"
+    t.datetime "start_time"
+    t.bigint "venue_id", null: false
+    t.string "ilk"
+    t.string "access"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["venue_id"], name: "index_concerts_on_venue_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -44,4 +69,5 @@ ActiveRecord::Schema[7.1].define(version: 2024_06_26_150704) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "concerts", "venues"
 end
