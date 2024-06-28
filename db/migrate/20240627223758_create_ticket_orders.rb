@@ -7,5 +7,7 @@ class CreateTicketOrders < ActiveRecord::Migration[7.1]
 
       t.timestamps
     end
+
+    add_reference :tickets, :ticket_order, foreign_key:true, null: true
   end
 end

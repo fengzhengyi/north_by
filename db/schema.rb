@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_06_26_153053) do
+ActiveRecord::Schema[7.1].define(version: 2024_06_27_224737) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -24,6 +24,13 @@ ActiveRecord::Schema[7.1].define(version: 2024_06_26_153053) do
     "concert",
     "meet_n_greet",
     "battle",
+  ], force: :cascade
+
+  create_enum :enum_status, [
+    "unsold",
+    "held",
+    "purchased",
+    "refunded",
   ], force: :cascade
 
   create_table "bands", force: :cascade do |t|
@@ -45,6 +52,60 @@ ActiveRecord::Schema[7.1].define(version: 2024_06_26_153053) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["venue_id"], name: "index_concerts_on_venue_id"
+  end
+
+  create_table "favorites", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "concert_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["concert_id"], name: "index_favorites_on_concert_id"
+    t.index ["user_id"], name: "index_favorites_on_user_id"
+  end
+
+  create_table "gigs", force: :cascade do |t|
+    t.bigint "concert_id", null: false
+    t.bigint "band_id", null: false
+    t.integer "order"
+    t.integer "duration_minutes"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["band_id"], name: "index_gigs_on_band_id"
+    t.index ["concert_id"], name: "index_gigs_on_concert_id"
+  end
+
+  create_table "shopping_carts", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_shopping_carts_on_user_id"
+  end
+
+  create_table "ticket_orders", force: :cascade do |t|
+    t.bigint "concert_id", null: false
+    t.string "status"
+    t.integer "count"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.bigint "shopping_cart_id"
+    t.index ["concert_id"], name: "index_ticket_orders_on_concert_id"
+    t.index ["shopping_cart_id"], name: "index_ticket_orders_on_shopping_cart_id"
+  end
+
+  create_table "tickets", force: :cascade do |t|
+    t.bigint "concert_id", null: false
+    t.integer "row"
+    t.integer "number"
+    t.bigint "user_id", null: false
+    t.string "status"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.bigint "ticket_order_id"
+    t.bigint "shopping_cart_id"
+    t.index ["concert_id"], name: "index_tickets_on_concert_id"
+    t.index ["shopping_cart_id"], name: "index_tickets_on_shopping_cart_id"
+    t.index ["ticket_order_id"], name: "index_tickets_on_ticket_order_id"
+    t.index ["user_id"], name: "index_tickets_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -70,4 +131,15 @@ ActiveRecord::Schema[7.1].define(version: 2024_06_26_153053) do
   end
 
   add_foreign_key "concerts", "venues"
+  add_foreign_key "favorites", "concerts"
+  add_foreign_key "favorites", "users"
+  add_foreign_key "gigs", "bands"
+  add_foreign_key "gigs", "concerts"
+  add_foreign_key "shopping_carts", "users"
+  add_foreign_key "ticket_orders", "concerts"
+  add_foreign_key "ticket_orders", "shopping_carts"
+  add_foreign_key "tickets", "concerts"
+  add_foreign_key "tickets", "shopping_carts"
+  add_foreign_key "tickets", "ticket_orders"
+  add_foreign_key "tickets", "users"
 end

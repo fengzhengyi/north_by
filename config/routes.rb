@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  resources :favorites
+  resources :shopping_carts
+  resources :ticket_orders
+  resources :tickets
+  resources :gigs
   resources :concerts
   resources :bands
   resources :venues

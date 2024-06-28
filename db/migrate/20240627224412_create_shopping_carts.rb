@@ -5,5 +5,8 @@ class CreateShoppingCarts < ActiveRecord::Migration[7.1]
 
       t.timestamps
     end
+
+    add_reference :tickets, :shopping_cart, foreign_key: true, null: true
+    add_reference :ticket_orders, :shopping_cart, foreign_key: true, null: true
   end
 end

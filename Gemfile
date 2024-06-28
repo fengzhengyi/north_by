@@ -74,6 +74,7 @@ group :development do
   # gem "spring"
 
   # 为项目中的类文件添加注释： bundle exec annotate --models/--routes
+  # 如果 model没有添加注释，可能是还没有生成数据表
   gem "annotate"
   gem "erb_lint", require: false
   gem "htmlbeautifier"
