@@ -1,0 +1,13 @@
+<h2 class="text-3xl font-bold flex items-center gap-2">
+  <%= schedule_day.day.by_example("Monday, January 2, 2006") %>
+  <span class="<%= SimpleForm.button_class %> text-lg font-semibold">
+    Hide
+  </span>
+</h2>
+<% if show %>
+  <section class="js--day-text">
+    <% schedule_day.concerts.sort_by(&:start_time).each do |concert| %>
+      <%= render(concert) %>
+    <% end %>
+  </section>
+<% end %>

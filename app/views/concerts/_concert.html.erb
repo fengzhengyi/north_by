@@ -1,37 +1,57 @@
-<div id="<%= dom_id concert %>">
-  <p class="my-5">
-    <strong class="block font-medium mb-1">Name:</strong>
-    <%= concert.name %>
-  </p>
+<article id="<%= dom_id concert %>" class="my-4">
+  <div class="grid grid-cols-5 gap-4">
+    <div class="col-span-1 text-xl ">
+      <%= concert.start_time.by_example("3:04 PM") %>
+    </div>
+    <div class="col-span-3">
+      <div class="name">
+        <div class="text-lg font-bold">
+          <%= link_to concert.name, concert %>
+        </div>
+      </div>
+      <p class="bands">
+        <%= concert.bands.map(&:name).join(', ') %>
+      </p>
+      <p class="genres">
+        <%= concert.genre_tags.split(', ').to_sentence %>
+      </p>
+      <div class="text-gray-500 font-bold">
+        <%= concert.venue.name %>
+      </div>
 
-  <p class="my-5">
-    <strong class="block font-medium mb-1">Description:</strong>
-    <%= concert.description %>
-  </p>
+    </div>
+    <div class="col-span-1 my-10">
+      <% if concert.sold_out? %>
+        <div class="font-bold">
+          Sold out
+        </div>
+      <% else %>
+        <%= pluralize(concert.unsold_ticket_count, 'Tickets') %>
+        Remaining
+      <% end %>
+      <br>
+      <br>
+      <div class="flex gap-1">
+        <% if current_user %>
+          <%= link_to "Edit",
+                      edit_concert_path(concert),
+                      class: SimpleForm.button_class %>
+          <% if current_user.favorite(concert) %>
+            <%= button_to "Unfavorite",
+                          favorite_path(current_user.favorite(concert)),
+                          method: 'delete',
+                          class: SimpleForm.button_class
+            %>
+          <% else %>
+            <%= button_to "Favorite",
+                          favorites_path(concert_id: concert.id),
+                          method: 'post',
+                          class: SimpleForm.button_class %>
+          <% end %>
+        <% end %>
+      </div>
+    </div>
+  </div>
 
-  <p class="my-5">
-    <strong class="block font-medium mb-1">Genre tags:</strong>
-    <%= concert.genre_tags %>
-  </p>
 
-  <p class="my-5">
-    <strong class="block font-medium mb-1">Start time:</strong>
-    <%= concert.start_time %>
-  </p>
-
-  <p class="my-5">
-    <strong class="block font-medium mb-1">Venue:</strong>
-    <%= concert.venue_id %>
-  </p>
-
-  <p class="my-5">
-    <strong class="block font-medium mb-1">Ilk:</strong>
-    <%= concert.ilk %>
-  </p>
-
-  <p class="my-5">
-    <strong class="block font-medium mb-1">Access:</strong>
-    <%= concert.access %>
-  </p>
-
-</div>
+</article>

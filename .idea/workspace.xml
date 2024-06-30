@@ -5,67 +5,45 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cdf3dd4c-460e-448f-8a09-c1dbd25a9a45" name="变更" comment="">
-      <change afterPath="$PROJECT_DIR$/app/controllers/gigs_controller.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/controllers/shopping_carts_controller.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/controllers/ticket_orders_controller.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/controllers/tickets_controller.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/helpers/gigs_helper.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/helpers/shopping_carts_helper.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/helpers/ticket_orders_helper.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/helpers/tickets_helper.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/models/gig.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/models/shopping_cart.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/models/ticket.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/models/ticket_order.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/gigs/_form.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/gigs/_gig.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/gigs/_gig.json.jbuilder" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/gigs/edit.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/gigs/index.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/gigs/index.json.jbuilder" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/gigs/new.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/gigs/show.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/gigs/show.json.jbuilder" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/shopping_carts/_form.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/shopping_carts/_shopping_cart.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/shopping_carts/_shopping_cart.json.jbuilder" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/shopping_carts/edit.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/shopping_carts/index.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/shopping_carts/index.json.jbuilder" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/shopping_carts/new.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/shopping_carts/show.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/shopping_carts/show.json.jbuilder" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/ticket_orders/_form.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/ticket_orders/_ticket_order.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/ticket_orders/_ticket_order.json.jbuilder" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/ticket_orders/edit.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/ticket_orders/index.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/ticket_orders/index.json.jbuilder" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/ticket_orders/new.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/ticket_orders/show.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/ticket_orders/show.json.jbuilder" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/tickets/_form.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/tickets/_ticket.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/tickets/_ticket.json.jbuilder" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/tickets/edit.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/tickets/index.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/tickets/index.json.jbuilder" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/tickets/new.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/tickets/show.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/tickets/show.json.jbuilder" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/db/migrate/20240627221841_create_gigs.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/db/migrate/20240627223136_create_tickets.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/db/migrate/20240627223758_create_ticket_orders.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/db/migrate/20240627224412_create_shopping_carts.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/controllers/schedules_controller.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/helpers/schedules_helper.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/models/schedule.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/models/schedule_day.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/layouts/_nav.html.erb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/schedule_days/_schedule_day.html.erb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/schedules/show.html.erb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/initializers/rails_live_reload.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/initializers/simple_form_tailwind.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/migrate/20240628225731_change_user_null_true_in_ticket.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/north_by.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/north_by.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gemfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/favorites_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/favorites_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/concert.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/concert.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/ticket.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/ticket.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/user.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/user.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/concerts/_concert.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/concerts/_concert.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/cable.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config/cable.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/tailwind.config.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db/schema.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/schema.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/seeds/development.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/seeds/development.rb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Ruby Class" />
+        <option value="HTML File" />
+        <option value="ERB File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -85,10 +63,11 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "ASKED_ADD_EXTERNAL_FILES": "true",
+    "DefaultHtmlFileTemplate": "HTML File",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/Users/yangqing/Desktop/rails/north_by/db",
+    "last_opened_file_path": "/Users/yangqing/Desktop/rails/north_by/app/views",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -101,7 +80,12 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/views" />
       <recent name="$PROJECT_DIR$/db" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/vendor/javascript" />
+      <recent name="$PROJECT_DIR$/app/assets" />
     </key>
   </component>
   <component name="RunManager" selected="Rails.north_by">
@@ -189,7 +173,7 @@
       <option name="presentableId" value="Default" />
       <updated>1719324065903</updated>
       <workItem from="1719324067357" duration="5478000" />
-      <workItem from="1719353411384" duration="18492000" />
+      <workItem from="1719353411384" duration="57043000" />
     </task>
     <servers />
   </component>
@@ -209,5 +193,27 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="ruby-line">
+          <url>file://$PROJECT_DIR$/app/views/layouts/_nav.html.erb</url>
+          <line>17</line>
+          <properties myBlockOrdinal="-1">
+            <option name="block-ordinal" value="-1" />
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="ruby-line">
+          <url>file://$PROJECT_DIR$/app/views/layouts/_nav.html.erb</url>
+          <line>22</line>
+          <properties myBlockOrdinal="-1">
+            <option name="block-ordinal" value="-1" />
+          </properties>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

@@ -17,4 +17,14 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
+
+  has_many :favorites, dependent: :destroy
+
+  def favorite(concert)
+    favorites.find_by(concert_id: concert)
+  end
+
+  def self.hoarder
+    User.find_by(email: "thoarder@example.com")
+  end
 end
