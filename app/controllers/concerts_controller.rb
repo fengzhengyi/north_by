@@ -8,6 +8,7 @@ class ConcertsController < ApplicationController
 
   # GET /concerts/1 or /concerts/1.json
   def show
+    render @concert if params[:inline]
   end
 
   # GET /concerts/new
@@ -38,7 +39,7 @@ class ConcertsController < ApplicationController
   def update
     respond_to do |format|
       if @concert.update(concert_params)
-        format.html { redirect_to concert_url(@concert), notice: "Concert was successfully updated." }
+        format.html { render @concert }
         format.json { render :show, status: :ok, location: @concert }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -58,13 +59,14 @@ class ConcertsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_concert
-      @concert = Concert.find(params[:id])
-    end
 
-    # Only allow a list of trusted parameters through.
-    def concert_params
-      params.require(:concert).permit(:name, :description, :genre_tags, :start_time, :venue_id, :ilk, :access)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_concert
+    @concert = Concert.find(params[:id])
+  end
+
+  # Only allow a list of trusted parameters through.
+  def concert_params
+    params.require(:concert).permit(:name, :description, :genre_tags, :start_time, :venue_id, :ilk, :access)
+  end
 end

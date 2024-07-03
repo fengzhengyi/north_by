@@ -1,3 +1,4 @@
+<%= turbo_frame_tag(dom_id(concert)) do %>
 <article id="<%= dom_id concert %>" class="my-4">
   <div class="grid grid-cols-5 gap-4">
     <div class="col-span-1 text-xl ">
@@ -20,7 +21,7 @@
       </div>
 
     </div>
-    <div class="col-span-1 my-10">
+    <div class="col-span-1 my-10 text-lg">
       <% if concert.sold_out? %>
         <div class="font-bold">
           Sold out
@@ -52,6 +53,5 @@
       </div>
     </div>
   </div>
-
-
 </article>
+<% end %>

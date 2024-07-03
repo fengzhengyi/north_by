@@ -24,7 +24,7 @@
               <div class="text-gray-300 px-3 py-2 font-bold">
                 Welcome，<%= current_user&.full_name  %>！
               </div>
-              <%= link_to "Log out",
+              <%= button_to "Log out",
                           destroy_user_session_path,
                           method: :delete,
                           class: "text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md  font-medium" %>

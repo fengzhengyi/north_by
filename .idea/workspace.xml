@@ -5,31 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cdf3dd4c-460e-448f-8a09-c1dbd25a9a45" name="变更" comment="">
-      <change afterPath="$PROJECT_DIR$/app/controllers/schedules_controller.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/helpers/schedules_helper.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/models/schedule.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/models/schedule_day.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/layouts/_nav.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/schedule_days/_schedule_day.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/schedules/show.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/initializers/rails_live_reload.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/initializers/simple_form_tailwind.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/db/migrate/20240628225731_change_user_null_true_in_ticket.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/north_by.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/north_by.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gemfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/favorites_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/favorites_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/concert.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/concert.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/ticket.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/ticket.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/user.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/user.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/concerts_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/concerts_controller.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/concerts/_concert.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/concerts/_concert.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/cable.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config/cable.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/tailwind.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/schema.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/schema.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/seeds/development.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/seeds/development.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/concerts/_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/concerts/_form.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/concerts/edit.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/concerts/edit.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/layouts/_nav.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/_nav.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/schedules/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/schedules/show.html.erb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,7 +50,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/Users/yangqing/Desktop/rails/north_by/app/views",
+    "last_opened_file_path": "/Users/yangqing/Desktop/rails/north_by",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -173,7 +156,9 @@
       <option name="presentableId" value="Default" />
       <updated>1719324065903</updated>
       <workItem from="1719324067357" duration="5478000" />
-      <workItem from="1719353411384" duration="57043000" />
+      <workItem from="1719353411384" duration="58986000" />
+      <workItem from="1719872499567" duration="2978000" />
+      <workItem from="1719958270033" duration="2904000" />
     </task>
     <servers />
   </component>
