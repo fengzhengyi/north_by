@@ -5,14 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cdf3dd4c-460e-448f-8a09-c1dbd25a9a45" name="变更" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/north_by.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/north_by.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/assets/images/music.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/concerts_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/concerts_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/concerts/_concert.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/concerts/_concert.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/concerts/_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/concerts/_form.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/concerts/edit.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/concerts/edit.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/helpers/application_helper.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/helpers/application_helper.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/layouts/_nav.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/_nav.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/schedules/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/schedules/show.html.erb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,7 +46,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/Users/yangqing/Desktop/rails/north_by",
+    "last_opened_file_path": "/Users/yangqing/Desktop/rails/north_by/app/assets/images",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -63,6 +59,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/assets/images" />
       <recent name="$PROJECT_DIR$/app/views" />
       <recent name="$PROJECT_DIR$/db" />
     </key>
@@ -158,7 +155,7 @@
       <workItem from="1719324067357" duration="5478000" />
       <workItem from="1719353411384" duration="58986000" />
       <workItem from="1719872499567" duration="2978000" />
-      <workItem from="1719958270033" duration="2904000" />
+      <workItem from="1719958270033" duration="8871000" />
     </task>
     <servers />
   </component>
@@ -184,7 +181,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="ruby-line">
           <url>file://$PROJECT_DIR$/app/views/layouts/_nav.html.erb</url>
-          <line>17</line>
+          <line>20</line>
           <properties myBlockOrdinal="-1">
             <option name="block-ordinal" value="-1" />
           </properties>
@@ -192,7 +189,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="ruby-line">
           <url>file://$PROJECT_DIR$/app/views/layouts/_nav.html.erb</url>
-          <line>22</line>
+          <line>25</line>
           <properties myBlockOrdinal="-1">
             <option name="block-ordinal" value="-1" />
           </properties>
