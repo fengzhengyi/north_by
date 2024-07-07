@@ -1,18 +1,21 @@
 class FavoritesController < ApplicationController
   before_action :set_favorite, only: %i[ destroy ]
 
+  def index
+  end
+
   # POST /favorites or /favorites.json
   def create
     Favorite.create(user: current_user, concert_id: params[:concert_id])
 
-    redirect_to :root
+    render partial: 'favorites/list'
   end
 
   # DELETE /favorites/1 or /favorites/1.json
   def destroy
     @favorite.destroy!
 
-    redirect_to :root
+    render partial: 'favorites/list'
   end
 
   private

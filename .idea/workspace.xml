@@ -5,22 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cdf3dd4c-460e-448f-8a09-c1dbd25a9a45" name="变更" comment="">
-      <change afterPath="$PROJECT_DIR$/app/javascript/controllers/menu_button_controller.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/favorites/index.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/favorites_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/favorites_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/javascript/controllers/application.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/javascript/controllers/application.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/concerts/_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/concerts/_form.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/favorites/_favorite.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/favorites/_favorite.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/favorites/_favorite.json.jbuilder" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/favorites/_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/favorites/_list.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/favorites/edit.html.erb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/favorites/index.html.erb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/favorites/index.json.jbuilder" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/favorites/new.html.erb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/favorites/show.html.erb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/favorites/show.json.jbuilder" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/layouts/_nav.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/_nav.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/schedules/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/schedules/show.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/concerts/_concert.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/concerts/_concert.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/favorites/_list.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/favorites/_list.html.erb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,6 +22,7 @@
         <option value="Ruby Class" />
         <option value="HTML File" />
         <option value="ERB File" />
+        <option value="Ruby File" />
       </list>
     </option>
   </component>
@@ -167,7 +157,7 @@
       <workItem from="1719324067357" duration="5478000" />
       <workItem from="1719353411384" duration="58986000" />
       <workItem from="1719872499567" duration="2978000" />
-      <workItem from="1719958270033" duration="15681000" />
+      <workItem from="1719958270033" duration="18019000" />
     </task>
     <servers />
   </component>
