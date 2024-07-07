@@ -27,7 +27,7 @@
   </section>
   <br>
   <% if current_user %>
-    <%#= render("favorites/list") %>
+    <%= render("favorites/list") %>
   <% end %>
   <section class="js--day sm:px-10">
     <% @schedule.schedule_days.each do |schedule_day| %>

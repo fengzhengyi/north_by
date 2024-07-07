@@ -1,12 +1,31 @@
-<div id="<%= dom_id favorite %>">
-  <p class="my-5">
-    <strong class="block font-medium mb-1">User:</strong>
-    <%= favorite.user_id %>
-  </p>
-
-  <p class="my-5">
-    <strong class="block font-medium mb-1">Concert:</strong>
-    <%= favorite.concert_id %>
-  </p>
-
-</div>
+<%- concert = favorite.concert %>
+<article class="my-6" id="<%= dom_id favorite %>">
+  <div class="grid grid-cols-5 gap-4">
+    <div class="col-span-1 text-xl">
+      <%= concert.start_time.by_example('Jan 02 @ 3:04 PM') %>
+    </div>
+    <div class="col-span-3">
+      <div class="name">
+        <div class="text-lg font-bold">
+          <%= link_to concert.name, concert %>
+        </div>
+      </div>
+      <div class="bands">
+        <%= concert.bands.map(&:name).join(', ') %>
+      </div>
+      <div class="genres">
+        <%= concert.genre_tags.split(",").to_sentence %>
+      </div>
+      <div class="font-bold text-gray-500">
+        <%= concert.venue.name %>
+      </div>
+    </div>
+    <div class="col-span-1">
+      <%= button_to "Unfavorite",
+                    favorite_path(id: favorite.id),
+                    method: :delete,
+                    class: SimpleForm.button_class
+      %>
+    </div>
+  </div>
+</article>

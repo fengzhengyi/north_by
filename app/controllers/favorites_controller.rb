@@ -3,7 +3,7 @@ class FavoritesController < ApplicationController
 
   # POST /favorites or /favorites.json
   def create
-    Favorite.create(user: current_user, concert_id: favorite_params[:concert_id])
+    Favorite.create(user: current_user, concert_id: params[:concert_id])
 
     redirect_to :root
   end
@@ -20,10 +20,5 @@ class FavoritesController < ApplicationController
   # Use callbacks to share common setup or constraints between actions.
   def set_favorite
     @favorite = Favorite.find(params[:id])
-  end
-
-  # Only allow a list of trusted parameters through.
-  def favorite_params
-    params.require(:favorite).permit(:concert_id)
   end
 end
