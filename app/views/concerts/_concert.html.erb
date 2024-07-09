@@ -43,14 +43,14 @@
               <%= button_to "Unfavorite",
                             favorite_path(current_user.favorite(concert)),
                             method: 'delete',
-                            form: { data: { 'turbo-frame': 'favorite_concerts' } },
+                            form: { data: { 'turbo-frame': 'favorite_concerts' } }, # 在 turbo stream方案中该属性应该丢弃
                             class: SimpleForm.button_class
               %>
             <% else %>
               <%= button_to "Favorite",
                             favorites_path(concert_id: concert.id),
                             method: 'post',
-                            form: { data: { 'turbo-frame': 'favorite_concerts' } },
+                            form: { data: { 'turbo-frame': 'favorite_concerts' } }, # 在 turbo stream方案中该属性应该丢弃
                             class: SimpleForm.button_class %>
             <% end %>
           <% end %>

@@ -43,8 +43,19 @@
                           new_user_session_path,
                           class: "text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md font-medium" %>
             <% end %>
+            <div class="font-bold flex gap-1 justify-items-end text-sm text-gray-300 py-2 px-3">
+              <span>Favorite Count: </span>
+              <%= turbo_frame_tag('favorite-count-number',
+                                  lazy: true,
+                                  src: favorites_path(count_only: true)) do %>
+            <span id="favorites-count">
+              ?
+            </span>
+              <% end %>
+            </div>
           </div>
         </div>
+
       </div>
     </div>
   </div>

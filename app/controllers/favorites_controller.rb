@@ -2,6 +2,7 @@ class FavoritesController < ApplicationController
   before_action :set_favorite, only: %i[ destroy ]
 
   def index
+    render partial: 'favorites/count' if params[:count_only]
   end
 
   # POST /favorites or /favorites.json
