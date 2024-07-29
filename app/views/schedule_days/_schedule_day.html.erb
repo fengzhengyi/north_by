@@ -1,13 +1,22 @@
-<h2 class="text-3xl font-bold flex items-center gap-2">
-  <%= schedule_day.day.by_example("Monday, January 2, 2006") %>
-  <span class="<%= SimpleForm.button_class %> text-lg font-semibold">
-    Hide
-  </span>
-</h2>
-<% if show %>
-  <section class="js--day-text">
+<div data-controller="css"
+data-css-status-value="false"
+data-css-css-class="hidden">
+  <h2 class="text-3xl font-bold flex items-center gap-2">
+    <%= schedule_day.day.by_example("Monday, January 2, 2006") %>
+    <span class="<%= SimpleForm.button_class %> text-lg font-semibold"
+    data-controller="text"
+    data-text-status-value="false"
+    data-text-on-value="Show"
+    data-text-off-value="Hide"
+    data-text-target="elementWithText"
+    data-action="click->text#toggle click->css#toggle">
+      Hide
+    </span>
+  </h2>
+  <section class="js--day-text"
+  data-css-target="elementToChange">
     <% schedule_day.concerts.sort_by(&:start_time).each do |concert| %>
       <%= render(concert) %>
     <% end %>
   </section>
-<% end %>
+</div>
