@@ -1,4 +1,4 @@
-<div data-controller="css"
+<section data-controller="css"
 data-css-status-value="false"
 data-css-css-class="hidden">
   <h2 class="text-3xl font-bold flex items-center gap-2">
@@ -13,10 +13,11 @@ data-css-css-class="hidden">
       Hide
     </span>
   </h2>
-  <section class="js--day-text"
-  data-css-target="elementToChange">
-    <% schedule_day.concerts.sort_by(&:start_time).each do |concert| %>
-      <%= render(concert) %>
-    <% end %>
-  </section>
-</div>
+  <% if show %>
+    <section class="js--day-text" data-css-target="elementToChange">
+      <% schedule_day.concerts.sort_by(&:start_time).each do |concert| %>
+        <%= render(concert) %>
+      <% end %>
+    </section>
+  <% end %>
+</section>
