@@ -3,7 +3,8 @@ import {Controller} from "@hotwired/stimulus"
 // Connects to data-controller="favorite-toggle"
 export default class extends Controller {
     static targets = ['elementToHide', 'elementWithText']
-    static  values = {visible: Boolean}
+    static classes = ['hidden'];
+    static values = {visible: Boolean}
 
     toggle() {
         this.toggleVisible()
@@ -14,13 +15,12 @@ export default class extends Controller {
     }
 
     visibleValueChanged() {
-        window.alert('changed')
         this.updateHiddenClass()
         this.updateText()
     }
 
     updateHiddenClass() {
-        this.elementToHideTarget?.classList.toggle('hidden', !this.visibleValue)
+        this.elementToHideTarget?.classList.toggle(this.hiddenClass, !this.visibleValue)
     }
 
     newText() {
