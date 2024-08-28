@@ -1,0 +1,2 @@
+module ClearAllTicketsHelper
+end

@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   resources :concerts
   resources :bands
   resources :venues
+  resources :clear_all_tickets, only: %i[:destroy]
   devise_for :users
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
@@ -15,5 +16,5 @@ Rails.application.routes.draw do
   get "up" => "rails/health#show", as: :rails_health_check
 
   # Defines the root path route ("/")
-  root to: 'schedules#show'
+  root to: "schedules#show"
 end
