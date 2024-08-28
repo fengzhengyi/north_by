@@ -7,7 +7,8 @@ Rails.application.routes.draw do
   resources :concerts
   resources :bands
   resources :venues
-  resources :clear_all_tickets, only: %i[:destroy]
+  resource :clear_all_tickets, only: :destroy
+  resource :tickets_to_buy_count, only: :update
   devise_for :users
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
