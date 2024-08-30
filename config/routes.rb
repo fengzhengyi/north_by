@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   resources :venues
   resource :clear_all_tickets, only: :destroy
   resource :tickets_to_buy_count, only: :update
+  resources :seats, only: %i[update destroy]
   devise_for :users
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
