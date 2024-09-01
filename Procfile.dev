@@ -1,2 +1,3 @@
+redis: docker run --rm -it --name redis_for_north_by -p 6379:6379 --mount type=volume,source=redis_for_north_by,target=/data redis:latest
 web: bin/rails server
 css: bin/rails tailwindcss:watch

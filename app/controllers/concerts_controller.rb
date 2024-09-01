@@ -8,7 +8,7 @@ class ConcertsController < ApplicationController
 
   # GET /concerts/1 or /concerts/1.json
   def show
-    render @concert if params[:inline]
+    render(@concert, locals: { user: current_user }) if params[:inline]
   end
 
   # GET /concerts/new

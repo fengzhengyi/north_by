@@ -9,14 +9,18 @@ class FavoritesController < ApplicationController
   def create
     @favorite = Favorite.create(user: current_user, concert_id: params[:concert_id])
 
-    respond_to(&:turbo_stream)
+    respond_to do |format|
+      format.turbo_stream { head(:ok) }
+    end
   end
 
   # DELETE /favorites/1 or /favorites/1.json
   def destroy
     @favorite.destroy!
 
-    respond_to(&:turbo_stream)
+    respond_to do |format|
+      format.turbo_stream { head(:ok) }
+    end
   end
 
   private
