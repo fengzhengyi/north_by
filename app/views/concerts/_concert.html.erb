@@ -1,5 +1,6 @@
 <%= turbo_frame_tag(dom_id(concert)) do %>
-  <article class="my-4">
+  <article class="my-4"
+  data-sold-out-data-target="concert">
     <div class="grid grid-cols-5 gap-4">
       <div class="col-span-1 text-xl ">
         <%= concert.start_time.by_example("3:04 PM") %>

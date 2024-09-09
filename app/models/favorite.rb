@@ -14,25 +14,35 @@ class Favorite < ApplicationRecord
 
   after_create_commit -> do
     # broadcast_append_later_to(user, :favorites, target: "favorite_concerts")
-    Turbo::StreamsChannel.broadcast_stream_to(
+    # Turbo::StreamsChannel.broadcast_stream_to(
+    #   user, :favorites,
+    #   content: ApplicationController.render(
+    #     :turbo_stream,
+    #     partial: "favorites/create",
+    #     locals: { favorite: self, user: user }
+    #   )
+    # )
+    broadcast_render_later_to(
       user, :favorites,
-      content: ApplicationController.render(
-        :turbo_stream,
-        partial: "favorites/create",
-        locals: { favorite: self, user: user }
-      )
+      partial: "favorites/create",
+      locals: { favorite: self, user: user }
     )
   end
 
   after_destroy_commit -> do
     # broadcast_remove_to(user, :favorites)
-    Turbo::StreamsChannel.broadcast_stream_to(
+    # Turbo::StreamsChannel.broadcast_stream_to(
+    #   user, :favorites,
+    #   content: ApplicationController.render(
+    #     :turbo_stream,
+    #     partial: "favorites/destroy",
+    #     locals: { favorite: self, user: user }
+    #   )
+    # )
+    broadcast_render_to(
       user, :favorites,
-      content: ApplicationController.render(
-        :turbo_stream,
-        partial: "favorites/destroy",
-        locals: { favorite: self, user: user }
-      )
+      partial: "favorites/destroy",
+      locals: { favorite: self, user: user }
     )
   end
 end

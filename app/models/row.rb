@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Row
   include ActiveModel::Model
   include ActiveModel::Conversion
@@ -21,6 +23,7 @@ class Row
   def seat_available?(seat)
     return false if close_to_edge?(seat)
     return false if close_to_purchased_ticket?(seat)
+
     true
   end
 

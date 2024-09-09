@@ -80,16 +80,16 @@ class Concert < ApplicationRecord
       row_at(
         tickets: value.sort_by(&:number),
         number: key.to_i,
-        tickets_to_buy_count: tickets_to_buy_count
+        tickets_to_buy_count:
       )
     end.sort_by(&:number)
   end
 
   def row_at(tickets:, number:, tickets_to_buy_count:)
     Row.new(
-      tickets: tickets,
-      number: number,
-      tickets_to_buy_count: tickets_to_buy_count
+      tickets:,
+      number:,
+      tickets_to_buy_count:
     )
   end
 
@@ -100,7 +100,7 @@ class Concert < ApplicationRecord
   def broadcast_schedule_change
     ActionCable.server.broadcast(
       "schedule",
-      {concerts: [{concertId:id,ticketsRemaining:tickets.unsold.count}]}
+      { concerts: [{ concertId: id, ticketsRemaining: tickets.unsold.count }] }
     )
   end
 

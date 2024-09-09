@@ -3,7 +3,8 @@ class ConcertsController < ApplicationController
 
   # GET /concerts or /concerts.json
   def index
-    @concerts = Concert.all
+    @query = params[:query]
+    @concerts = Concert.search(@query)
   end
 
   # GET /concerts/1 or /concerts/1.json
