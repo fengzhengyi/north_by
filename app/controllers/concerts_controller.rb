@@ -4,6 +4,7 @@ class ConcertsController < ApplicationController
   # GET /concerts or /concerts.json
   def index
     @query = params[:query]
+    @modal = params[:modal]
     @concerts = Concert.search(@query)
   end
 

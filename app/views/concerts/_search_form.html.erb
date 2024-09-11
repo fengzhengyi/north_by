@@ -9,6 +9,7 @@
             action: "input->search#submit"
           }
         ) do %>
+      <%= hidden_field_tag :modal, true %>
       <div class="flex justify-center">
         <div class="w-4/5">
           <%= text_field_tag(
