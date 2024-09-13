@@ -31,14 +31,7 @@
 
       </div>
       <div class="col-span-1 my-10 text-lg">
-        <% if concert.sold_out? %>
-          <div class="font-bold">
-            Sold out
-          </div>
-        <% else %>
-          <%= pluralize(concert.unsold_ticket_count, 'Tickets') %>
-          Remaining
-        <% end %>
+        <div data-concert-target="tickets"></div>
         <br>
         <br>
         <div class="flex gap-1">

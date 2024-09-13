@@ -20,7 +20,7 @@ class Ticket < ApplicationRecord
   belongs_to :shopping_cart, optional: true
 
   after_update_commit -> do
-                        turbo::StreamsChannel.broadcast_stream_to(
+                        Turbo::StreamsChannel.broadcast_stream_to(
                           concert,
                           content: { seat: id, status: status }.to_json,
                         )
