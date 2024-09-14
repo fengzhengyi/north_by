@@ -1,5 +1,5 @@
 class SeatsController < ApplicationController
-  before_action :load_data, only: [:update, :destroy]
+  before_action :load_data, only: %i[update destroy]
 
   def update
     @cart.add_tickets(
@@ -7,9 +7,11 @@ class SeatsController < ApplicationController
       row: params[:row_number].to_i,
       seat_number: params[:seat_number].to_i,
       tickets_to_buy_count: params[:tickets_to_buy_count].to_i,
-      status: "held"
+      status: 'held'
     )
     load_row
+    result = Ticket.data_for_concert(params[:concert_id])
+    ActionCable.server.broadcast("concert_#{params[:concert_id]}", result)
     @concert.broadcast_schedule_change
   end
 
@@ -19,17 +21,19 @@ class SeatsController < ApplicationController
       row: params[:row_number].to_i,
       seat_number: params[:seat_number].to_i,
       tickets_to_buy_count: params[:tickets_to_buy_count].to_i,
-      status: "unsold"
+      status: 'unsold'
     )
     load_row
+    result = Ticket.data_for_concert(params[:concert_id])
+    ActionCable.server.broadcast("concert_#{params[:concert_id]}", result)
     @concert.broadcast_schedule_change
   end
 
   private
 
   def load_data
-    @user=current_user
-    @cart=ShoppingCart.find_or_create_by(user_id: params[:user_id])
+    @user = current_user
+    @cart = ShoppingCart.find_or_create_by(user_id: params[:user_id])
     @concert = Concert.find(params[:concert_id])
   end
 
@@ -40,5 +44,4 @@ class SeatsController < ApplicationController
       tickets_to_buy_count: params[:tickets_to_buy_count].to_i
     )
   end
-
 end

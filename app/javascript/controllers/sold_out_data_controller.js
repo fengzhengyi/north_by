@@ -10,17 +10,25 @@ export default class extends Controller {
     }
 
     createSubscription(source) {
-        return createConsumer.subscriptions.create('ScheduleChannel', {
-            received({soldOutConcertIds}) {
-                source.updateData(soldOutConcertIds)
+        return createConsumer().subscriptions.create('ScheduleChannel', {
+            received({concerts}) {
+                source.updateData(concerts)
             }
         })
     }
 
-    updateData(soldOutConcertIds) {
-        this.concertTargets.forEach(e => {
-            e.dataset.concertSoldOutValue = soldOutConcertIds
-                .includes(parseInt(e.dataset.concertIdValue,10)).toString()
-        })
+    updateData(concerts) {
+        debugger
+        concerts.forEach(({ concertId, ticketsRemaining }) => {
+            this.concertTargets.forEach((e) => {
+              if (e.dataset.concertIdValue === concertId.toString()) {
+                e.dataset.concertTicketsRemainingValue =
+                  ticketsRemaining.toString()
+                e.dataset.concertSoldOutValue = (
+                  ticketsRemaining === 0
+                ).toString()
+              }
+            })
+          })
     }
 }

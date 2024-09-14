@@ -1,28 +1,30 @@
-import {Controller} from "@hotwired/stimulus"
-import {createConsumer} from "@rails/actioncable"
+import { Controller } from "@hotwired/stimulus"
+import consumer from "../channels/consumer"
 // Connects to data-controller="cable-receiver"
 export default class extends Controller {
-    static values = {concertId: Number, channelName: String}
-    static  targets = ["form"]
+    static values = { concertId: Number, channelName: String }
+    static targets = ["form"]
 
     connect() {
         this.channel ??= this.createChannel(this)
     }
 
     createChannel(source) {
-        return createConsumer().subscriptions.create(
-            {channel: 'concertChannel', concertId: this.concertIdValue},
+        debugger
+        return consumer.subscriptions.create(
+            { channel: 'concertChannel', concertId: this.concertIdValue },
             {
-                received(data) {
-                    source.seatUpdated(data)
+                received(ticket) {
+                    source.seatUpdated(ticket)
                 }
             }
         )
     }
 
-    seatUpdated(data){
-        const seatElement = document.getElementById(data.seat)
-        if (!seatElement || seatElement.dataset.status !== data.status) {
+    seatUpdated(ticket) {
+        debugger
+        const seatElement = document.getElementById(ticket.seat)
+        if (!seatElement || seatElement.dataset.status !== ticket.status) {
             this.formTarget.requestSubmit()
         }
     }

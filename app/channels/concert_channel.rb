@@ -1,9 +1,10 @@
-class ScheduleChannel < ApplicationCable::Channel
+class ConcertChannel < ApplicationCable::Channel
   def subscribed
-    steam_from "schedule"
+    stream_from "concert_#{params[:concertId]}"
   end
 
   def unsubscribed
     # Any cleanup needed when channel is unsubscribed
   end
+
 end
