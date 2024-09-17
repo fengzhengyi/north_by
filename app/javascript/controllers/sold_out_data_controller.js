@@ -18,15 +18,13 @@ export default class extends Controller {
     }
 
     updateData(concerts) {
-        debugger
         concerts.forEach(({ concertId, ticketsRemaining }) => {
             this.concertTargets.forEach((e) => {
               if (e.dataset.concertIdValue === concertId.toString()) {
                 e.dataset.concertTicketsRemainingValue =
                   ticketsRemaining.toString()
-                e.dataset.concertSoldOutValue = (
-                  ticketsRemaining === 0
-                ).toString()
+                e.dataset.concertSoldOutValue = (ticketsRemaining === 0).toString()
+
               }
             })
           })

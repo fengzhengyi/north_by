@@ -5,9 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cdf3dd4c-460e-448f-8a09-c1dbd25a9a45" name="变更" comment="">
-      <change afterPath="$PROJECT_DIR$/app/javascript/controllers/cable_receiver_controller.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/javascript/controllers/form_controller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/north_by.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/north_by.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/channels/concert_channel.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/channels/schedule_channel.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/channels/schedule_channel.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/seats_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/seats_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/tickets_to_buy_counts_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/tickets_to_buy_counts_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/javascript/channels/concert_channel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/javascript/channels/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/javascript/channels/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/javascript/controllers/cable_receiver_controller.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/javascript/controllers/concert_controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/javascript/controllers/concert_controller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/javascript/controllers/sold_out_data_controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/javascript/controllers/sold_out_data_controller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/favorite.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/favorite.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/seats/destroy.turbo_stream.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/seats/_destroy.turbo_stream.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/seats/update.turbo_stream.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/seats/_update.turbo_stream.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/tickets_to_buy_counts/update.turbo_stream.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/tickets_to_buy_counts/_update.turbo_stream.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/venues/_venue.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/venues/_venue.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/venues/_venue_header.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/venues/_venue_header.html.erb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -165,7 +179,7 @@
       <workItem from="1723242208359" duration="657000" />
       <workItem from="1724551194306" duration="34783000" />
       <workItem from="1725750752262" duration="12577000" />
-      <workItem from="1725849920398" duration="20199000" />
+      <workItem from="1725849920398" duration="34213000" />
     </task>
     <servers />
   </component>

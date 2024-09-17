@@ -25,7 +25,7 @@ class Favorite < ApplicationRecord
     broadcast_render_later_to(
       user, :favorites,
       partial: "favorites/create",
-      locals: { favorite: self, user: user }
+      locals: { favorite: self, user: }
     )
   end
 
@@ -42,7 +42,7 @@ class Favorite < ApplicationRecord
     broadcast_render_to(
       user, :favorites,
       partial: "favorites/destroy",
-      locals: { favorite: self, user: user }
+      locals: { favorite: self, user: }
     )
   end
 end

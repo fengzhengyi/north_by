@@ -1,27 +1,25 @@
-<section class="venue-header">
+<%# locals: (concert:,venue:,tickets_to_buy_count: 1) -%>
+<section class="venue-header" id="venue-header">
   <div>
     <div class="flex text-2xl font-bold mx-4">
       <span>How many tickets would your like?</span>
       <span class="select ml-4"
-            data-controller="form cable-receiver"
-            data-cable-receiver-channel-name-value="ConcertChannel"
-            data-cable-recriver-concert-id-value="<%= concert.id %>">
+            data-controller="form">
         <%= form_with(
-                url: tickets_to_buy_count_path,
-                method: "patch",
-                data:{
-                    "form-target": "form",
-                    "cable-receiver-target": "form"
-                }
+              url: tickets_to_buy_count_path,
+              method: "patch",
+              data: {
+                "form-target": "form",
+              }
             ) do |f| %>
           <%= hidden_field_tag(:concert_id, concert.id) %>
           <%= hidden_field_tag(:venue_id, venue.id) %>
           <%= select_tag(
                 :tickets_to_buy_count,
-                 options_for_select(1..venue.seats_per_row),
-                 "data-cy":"ticketsToBuy",
-                 "data-action":"change->form#submit"
-                 ) %>
+                options_for_select(1..venue.seats_per_row, tickets_to_buy_count),
+                "data-cy": "ticketsToBuy",
+                "data-action": "change->form#submit"
+              ) %>
         <% end %>
       </span>
     </div>

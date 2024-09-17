@@ -1,0 +1,21 @@
+<%= turbo_stream.replace(
+      "venue-body",
+      partial: "venues/venue_body",
+      locals: {
+        tickets_to_buy_count:,
+        concert:,
+        user:,
+      }
+    ) %>
+
+<%= turbo_stream.replace(
+      "subtotal",
+      partial: "venues/subtotal",
+      locals: { concert:, user: }
+    ) %>
+
+<%= turbo_stream.replace(
+      "venue-header",
+      partial: "venues/venue_header",
+      locals: { venue:, concert:, tickets_to_buy_count: }
+    ) %>

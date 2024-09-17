@@ -10,9 +10,19 @@ class SeatsController < ApplicationController
       status: 'held'
     )
     load_row
-    result = Ticket.data_for_concert(params[:concert_id])
-    ActionCable.server.broadcast("concert_#{params[:concert_id]}", result)
+    Turbo::StreamsChannel.broadcast_stream_to(
+      @concert, @user,
+      content: ApplicationController.render(
+        :turbo_stream,
+        partial: "seats/update",
+        locals: { concert: @concert, user: @user, row: @row }
+      )
+    )
     @concert.broadcast_schedule_change
+    respond_to do |format|
+      format.turbo_stream { head(:ok) }
+    end
+
   end
 
   def destroy
@@ -24,9 +34,18 @@ class SeatsController < ApplicationController
       status: 'unsold'
     )
     load_row
-    result = Ticket.data_for_concert(params[:concert_id])
-    ActionCable.server.broadcast("concert_#{params[:concert_id]}", result)
+    Turbo::StreamsChannel.broadcast_stream_to(
+      @concert, @user,
+      content: ApplicationController.render(
+        :turbo_stream,
+        partial: "seats/update",
+        locals: { concert: @concert, user: @user, row: @row }
+      )
+    )
     @concert.broadcast_schedule_change
+    respond_to do |format|
+      format.turbo_stream { head(:ok) }
+    end
   end
 
   private
