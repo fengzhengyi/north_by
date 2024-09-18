@@ -45,4 +45,8 @@ class Favorite < ApplicationRecord
       locals: { favorite: self, user: }
     )
   end
+
+  def sort_date
+    concert.start_time.to_i
+  end
 end

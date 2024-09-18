@@ -1,5 +1,9 @@
-<%- concert = favorite.concert %>
-<article class="my-6" id="<%= dom_id favorite %>">
+<%- concert = favorite.concert, animate_in ||= false %>
+<article id="<%= dom_id favorite %>"
+         class="my-6 <%= animate_in ? 'animate__animated animate__slideInRight' : '' %>"
+         data-animate-out="animate__slideOutRight"
+         data-sort-target="sortElement"
+         data-sort-value="<%= favorite.sort_date %>">
   <div class="grid grid-cols-5 gap-4">
     <div class="col-span-1 text-xl">
       <%= concert.start_time.by_example('Jan 02 @ 3:04 PM') %>

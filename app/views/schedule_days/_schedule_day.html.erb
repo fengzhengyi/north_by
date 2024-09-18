@@ -1,4 +1,5 @@
-<section data-controller="css"
+<section id="day-body-<%= schedule_day.day_string %>"
+         data-controller="css"
          data-css-status-value="false"
          data-css-css-class="hidden">
   <h2 class="text-3xl font-bold flex items-center gap-2">
@@ -16,7 +17,7 @@
   <% if show %>
     <section class="js--day-text" data-css-target="elementToChange">
       <% schedule_day.concerts.sort_by(&:start_time).each do |concert| %>
-        <%= render(concert, user: current_user ) %>
+        <%= render(concert, user: current_user) %>
       <% end %>
     </section>
   <% end %>
