@@ -1,10 +1,15 @@
 <%# locals: (favorite:, animate_in: "false") -%>
 <% concert = favorite.concert %>
 <article id="<%= dom_id favorite %>"
-         class="my-6 <%= animate_in ? 'animate__animated animate__slideInRight' : '' %>"
+         class="my-6 animate__animated"
          data-animate-out="animate__slideOutRight"
          data-sort-target="sortElement"
-         data-sort-value="<%= favorite.sort_date %>">
+         data-sort-value="<%= favorite.sort_date %>"
+         data-controller="css"
+         data-css-status-value="<%= animate_in ? "true" : "false" %>"
+         data-css-css-class="animate__slideInRight"
+         data-css-target="elementToChange"
+         data-action="animationend->css#toggle">
   <div class="grid grid-cols-5 gap-4">
     <div class="col-span-1 text-xl">
       <%= concert.start_time.by_example('Jan 02 @ 3:04 PM') %>

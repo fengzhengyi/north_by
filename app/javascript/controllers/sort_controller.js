@@ -21,7 +21,9 @@ export default class extends Controller {
     if (this.targetsAlreadySorted()) {
       return
     }
-    this.sortElements.sort((a, b) => this.sortValue(a) - this.sortValue(b))
+    // 添加的节点可以是已经存在于文档中的节点，这样会将其从原来的位置移动到新的位置。
+    // 如果希望复制一个节点而不是移动它，可以使用cloneNode()方法先复制节点，然后再添加
+    this.sortElementTargets.sort((a, b) => this.sortValue(a) - this.sortValue(b))
       .forEach(elm => this.element.append(elm))
   }
 
