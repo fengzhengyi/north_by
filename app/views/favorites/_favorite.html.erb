@@ -1,4 +1,5 @@
-<%- concert = favorite.concert, animate_in ||= false %>
+<%# locals: (favorite:, animate_in: "false") -%>
+<% concert = favorite.concert %>
 <article id="<%= dom_id favorite %>"
          class="my-6 <%= animate_in ? 'animate__animated animate__slideInRight' : '' %>"
          data-animate-out="animate__slideOutRight"

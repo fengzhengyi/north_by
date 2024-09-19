@@ -21,13 +21,11 @@
           No favorite concerts yet
         <% end %>
       </div>
-
-      <div id="favorite-concert-list">
+      <div id="favorite-concert-list" data-controller="sort">
         <% current_user.favorites.each do |favorite| %>
-          <%= render(favorite) %>
+          <%= render(favorite, animate_in: false) %>
         <% end %>
       </div>
     </div>
-
   </section>
 <% end %>
