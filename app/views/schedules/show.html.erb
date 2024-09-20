@@ -33,11 +33,10 @@
   <% if current_user %>
     <%= render("favorites/list") %>
   <% end %>
-  <section class="js--day sm:px-10">
-    <% @schedule.schedule_days.each do |schedule_day| %>
-      <%= render(schedule_day, show: !schedule_day.hidden) %>
-      <br>
+  <section data-controller="sort">
+    <% @concerts.sort_by(&:start_time).each do |concert| %>
+      <%= render(concert, user: current_user) %>
     <% end %>
   </section>
+  <section>
 </section>
-

@@ -41,6 +41,7 @@ class ConcertsController < ApplicationController
   def update
     respond_to do |format|
       if @concert.update(concert_params)
+        format.turbo_stream {}
         format.html { render @concert }
         format.json { render :show, status: :ok, location: @concert }
       else

@@ -1,7 +1,7 @@
 class SchedulesController < ApplicationController
   def show
-    concerts = Concert.includes(:venue, gigs: :band).all
-    @schedule = Schedule.form_concerts(concerts)
+    @concerts = Concert.includes(:venue, gigs: :band).all
+    @schedule = Schedule.form_concerts(@concerts)
     @schedule.hide(params[:hidden]&.split(",") || [])
     @schedule.schedule_day_at(params[:toggle])&.toggle!
 

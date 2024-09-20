@@ -1,9 +1,13 @@
-<%= turbo_frame_tag(dom_id(concert)) do %>
+<%= turbo_frame_tag(dom_id(concert),
+                   class: "concert",
+                   "data-sort-target": "sortElement",
+                   "data-sort-value": concert.start_time.to_i,
+                   "data-#{concert.start_time.by_example("2006-01-02")}": true) do %>
   <article class="my-4"
            data-sold-out-data-target="concert"
            data-controller="concert"
            data-concert-id-value="<%= concert.id %>"
-           data-concert-sold-out-value="<%= concert.sold_out? ? 'true' : 'false' %>"
+           data-concert-sold-out-value="<%= concert.sold_out? ? "true" : "false" %>"
            data-concert-tickets-remaining-value="<%= concert.unsold_ticket_count %>"
   >
 
@@ -16,14 +20,14 @@
           <div class="text-lg font-bold">
             <%= link_to concert.name,
                         concert,
-                        data: { 'turbo-frame': '_top' } %>
+                        data: { 'turbo-frame': "_top" } %>
           </div>
         </div>
         <p class="bands">
-          <%= concert.bands.map(&:name).join(', ') %>
+          <%= concert.bands.map(&:name).join(", ") %>
         </p>
         <p class="genres">
-          <%= concert.genre_tags.split(', ').to_sentence %>
+          <%= concert.genre_tags.split(", ").to_sentence %>
         </p>
         <div class="text-gray-500 font-bold">
           <%= concert.venue.name %>
@@ -42,15 +46,14 @@
             <% if user.favorite(concert) %>
               <%= button_to "Unfavorite",
                             favorite_path(user.favorite(concert)),
-                            method: 'delete',
-                            form: { data: { 'turbo-frame': 'favorite_concerts' } }, # 在 turbo stream方案中该属性应该丢弃
-                            class: SimpleForm.button_class
-              %>
+                            method: "delete",
+                            form: { data: { 'turbo-frame': "favorite_concerts" } }, # 在 turbo stream方案中该属性应该丢弃
+                            class: SimpleForm.button_class %>
             <% else %>
               <%= button_to "Favorite",
                             favorites_path(concert_id: concert.id),
-                            method: 'post',
-                            form: { data: { 'turbo-frame': 'favorite_concerts' } }, # 在 turbo stream方案中该属性应该丢弃
+                            method: "post",
+                            form: { data: { 'turbo-frame': "favorite_concerts" } }, # 在 turbo stream方案中该属性应该丢弃
                             class: SimpleForm.button_class %>
             <% end %>
           <% end %>
