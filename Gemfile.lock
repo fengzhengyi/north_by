@@ -141,6 +141,9 @@ GEM
       actionview (>= 5.0.0)
       activesupport (>= 5.0.0)
     json (2.7.2)
+    kredis (1.2.0)
+      activesupport (>= 6.0.0)
+      redis (~> 4.2)
     language_server-protocol (3.17.0.3)
     listen (3.9.0)
       rb-fsevent (~> 0.10, >= 0.10.3)
@@ -234,10 +237,7 @@ GEM
       ffi (~> 1.0)
     rdoc (6.7.0)
       psych (>= 4.0.0)
-    redis (5.2.0)
-      redis-client (>= 0.22.0)
-    redis-client (0.22.2)
-      connection_pool
+    redis (4.7.0)
     regexp_parser (2.9.2)
     reline (0.5.9)
       io-console (~> 0.5)
@@ -324,6 +324,7 @@ DEPENDENCIES
   htmlbeautifier
   importmap-rails
   jbuilder
+  kredis
   listen
   pg (~> 1.1)
   puma (>= 5.0)

@@ -14,16 +14,23 @@ export default class extends Controller {
         const everyDayUnselected = this.everyDayUnselected()
         this.calenderDayTargets.forEach((day) => {
             const show = everyDayUnselected || day.dataset.cssStatusValue === 'true'
-            const dayBody = document.getElementById(day.dataset.scheduleId)
-            dayBody.classList.toggle('hidden',!show)
+            this.toggleAssociatedConcerts(day.dataset.scheduleAttribute, !show)
         })
     }
 
-    showAll(){
+    showAll() {
         this.calenderDayTargets.forEach((day) => {
             day.dataset.cssStatusValue = 'false'
-            const dayBody = document.getElementById(day.dataset.scheduleId)
-            dayBody.classList.toggle('hidden',false)
+
+            this.toggleAssociatedConcerts(day.dataset.scheduleAttribute, !show)
         })
+    }
+
+    toggleAssociatedConcerts(attributeName, toggleValue) {
+        document
+            .querySelectorAll(`.concert[${attributeName}]`)
+            .forEach((element) => {
+                element.classList.toggle("hidden", toggleValue)
+            })
     }
 }

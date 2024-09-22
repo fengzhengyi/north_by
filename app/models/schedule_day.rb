@@ -11,7 +11,7 @@ class ScheduleDay
   end
 
   def day_string
-    day.by_example('2024-06-29')
+    day.by_example('2006-01-02')
   end
 
   def day_of?(string)

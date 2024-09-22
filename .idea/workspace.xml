@@ -6,9 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="cdf3dd4c-460e-448f-8a09-c1dbd25a9a45" name="变更" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/javascript/controllers/sort_controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/javascript/controllers/sort_controller.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/favorites/_favorite.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/favorites/_favorite.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/javascript/controllers/calender_controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/javascript/controllers/calender_controller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/schedule_day.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/schedule_day.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/concerts/update.turbo_stream.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/concerts/update.turbo_stream.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/schedules/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/schedules/show.html.erb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -166,7 +167,7 @@
       <workItem from="1723242208359" duration="657000" />
       <workItem from="1724551194306" duration="34783000" />
       <workItem from="1725750752262" duration="12577000" />
-      <workItem from="1725849920398" duration="42924000" />
+      <workItem from="1725849920398" duration="46955000" />
     </task>
     <servers />
   </component>

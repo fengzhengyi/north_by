@@ -298,6 +298,11 @@
               <RakeTaskImpl description="Setup Importmap for the app" fullCommand="importmap:install" id="install" />
             </subtasks>
           </RakeTaskImpl>
+          <RakeTaskImpl id="kredis">
+            <subtasks>
+              <RakeTaskImpl description="Install kredis" fullCommand="kredis:install" id="install" />
+            </subtasks>
+          </RakeTaskImpl>
           <RakeTaskImpl id="log">
             <subtasks>
               <RakeTaskImpl description="Truncate all/specified *.log files in log/ to zero bytes (specify which logs with LOGS=test,development)" fullCommand="log:clear" id="clear" />

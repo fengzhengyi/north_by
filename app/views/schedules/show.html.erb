@@ -1,3 +1,16 @@
+<style>
+  <% @schedule.schedule_days.each do |schedule_day| %>
+  <% day = "data-#{schedule_day.day.by_example('2006-01-02')}" %>
+  .concert[<%= day %>]:first-child::before,
+  .concert:not([<%= day %>]) + [<%= day %>]::before {
+      content: "<%= schedule_day.day.by_example("Monday, January 2, 2006") %>";
+      font-size: 1.875rem;
+      line-height: 2.25rem;
+      font-weight: 700;
+  }
+
+  <% end %>
+</style>
 <%= turbo_stream_from(current_user, :favorites) %>
 <section data-controller="sold-out-data">
   <section>
@@ -11,7 +24,7 @@
                data-css-off-class="border-transparent"
                data-css-target="elementToChange"
                data-calender-target="calenderDay"
-               data-schedule-id="day-body-<%= schedule_day.day_string %>"
+               data-schedule-attribute="data-<%= schedule_day.day_string %>"
                data-action="click->css#toggle click->calender#filter">
             <%= schedule_day.day.by_example("Jan 2") %>
           </div>
@@ -38,5 +51,5 @@
       <%= render(concert, user: current_user) %>
     <% end %>
   </section>
-  <section>
+</section>
 </section>
