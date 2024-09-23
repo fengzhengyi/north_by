@@ -48,7 +48,11 @@
   <% end %>
   <section data-controller="sort">
     <% @concerts.sort_by(&:start_time).each do |concert| %>
-      <%= render(concert, user: current_user) %>
+      <% if current_user.editing?(concert) %>
+        <%= render("concerts/form", concert: concert) %>
+      <% else %>
+        <%= render(concert, user: current_user) %>
+      <% end %>
     <% end %>
   </section>
 </section>

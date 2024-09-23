@@ -20,6 +20,8 @@ class User < ApplicationRecord
 
   has_many :favorites, dependent: :destroy
 
+  kredis_unique_list :concerts_being_edited, typed: :integer
+
   def favorite(concert)
     favorites.find_by(concert_id: concert)
   end
@@ -27,4 +29,17 @@ class User < ApplicationRecord
   def self.hoarder
     User.find_by(email: "thoarder@example.com")
   end
+
+  def editing?(concert)
+    concerts_being_edited.elements.include?(concert.id)
+  end
+
+  def start_editing(concert)
+    concerts_being_edited.append(concert.id)
+  end
+
+  def end_editing(concert)
+    concerts_being_edited.remove(concert.id)
+  end
+
 end
